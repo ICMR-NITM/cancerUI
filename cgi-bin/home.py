@@ -45,6 +45,20 @@ html = """
 
   <body>
 
+  <style>
+  .loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('https://www.wsbonline.com/Images/Icons/Processing.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+}
+
+  </style>
+
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="/cgi-bin/home.py">Cancer prediction tool</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,6 +68,8 @@ html = """
     </nav>
 
     <main role="main" class="container">
+    <div class="loader " style="display:none";></div>
+
 
       <div class="starter-template">
         <h1>Breast cancer prediction using machine learning methodologies</h1>
@@ -63,9 +79,10 @@ html = """
 
         
         <p class="lead">Paste the test dataset file in the <i>root</i> of the project and click <i>start</i>.</p>
-       <a type="button" class="btn btn-success btn-lg btn-block" href="http://localhost:8000/cgi-bin/report.py">START</a>
+       <a type="button" class="btn btn-success btn-lg btn-block" href="http://localhost:8000/cgi-bin/report.py" onclick="invoke_loader()">START</a>
 
       </div>
+
 
     </main><!-- /.container -->
 
@@ -76,9 +93,22 @@ html = """
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="https://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
     <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+
+    function invoke_loader(){
+
+    console.log("hello");
+    $('.loader').show();
+
+
+    }
+
+  
+    </script>
   </body>
 </html>
 
-""".format(cgi.escape(date_string), cgi.escape(str(hit_count)))
+"""
 
 print header + html

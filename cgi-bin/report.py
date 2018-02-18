@@ -149,7 +149,7 @@ def for_user():
 
             print header + html
             print '<h1 class="container">Probablity of Benign (non-cancerous): <span class="badge badge-info">%s</span></h1>' % (str(p_benign)+"%")
-            print '<h1 class="container">Probablity of Malign (cancerous): &nbsp; &nbsp; &nbsp;<span class="badge badge-info">%s</span></h1>' % (str(p_malignant)+"%")
+            print '<h1 class="container">Probablity of Malignant (cancerous): &nbsp; &nbsp; &nbsp;<span class="badge badge-info">%s</span></h1>' % (str(p_malignant)+"%")
             print "<br>"
             print '<a type="button" class="container btn btn-success btn-lg btn-block" href="http://localhost:8000/cgi-bin/home.py">TRY AGAIN</a>'
 
@@ -216,7 +216,7 @@ def for_user():
 
             print header + html
             print '<h1 class="container">Probablity of Benign (non-cancerous): <span class="badge badge-info">%s</span></h1>' % (str(p_benign)+"%")
-            print '<h1 class="container">Probablity of Malign (cancerous): &nbsp; &nbsp; &nbsp;<span class="badge badge-info">%s</span></h1>' % (str(p_malignant)+"%")
+            print '<h1 class="container">Probablity of Malignant (cancerous): &nbsp; &nbsp; &nbsp;<span class="badge badge-info">%s</span></h1>' % (str(p_malignant)+"%")
             print "<br>"
             print '<a type="button" class="container btn btn-success btn-lg btn-block" href="http://localhost:8000/cgi-bin/home.py">TRY AGAIN</a>'
 
